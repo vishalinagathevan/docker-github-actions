@@ -18,6 +18,3 @@ jobs:
         echo "${{ secrets.DOCKERPW }}" | docker login -u "vishali07" --password "VISHALI@2001"
         docker image build -t vishali07/python-flask:latest .
         docker push vishali07/python-flask:latest
-    - name: Run the Docker
-      run: |
-         docker run -d -p 5000:5000 flask
